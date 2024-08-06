@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,8 +12,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <>
+        <head>
+            <link rel="icon" href="/imagenes/favicon-v6.ico" sizes="any" />
+        </head>
+        <html lang="en">
+            <body className={inter.className}>
+                <div className="grid grid-rows-layout-principal w-full min-h-screen">
+                    <Navbar/>
+                    <main className="w-full justify-self-center">
+                        {children}
+                    </main>
+                    <Footer/>
+                </div>
+            </body>
+        </html>
+    </>
   );
 }
