@@ -24,8 +24,8 @@ export const menuItemsData = [
             imagen: 'https://placehold.co/200x200',
         },
         {
-            title: 'Adhesivos',
-            url: '/tienda/Adhesivos',
+            title: 'Anillado',
+            url: '/tienda/Anillado',
             imagen: 'https://placehold.co/200x200',
         }
       ]
